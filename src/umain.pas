@@ -123,7 +123,7 @@ begin
       if fileExists(OpenDialog1.Filename) then  MyTrxFilename := OpenDialog1.Filename
       else ShowMessage('No file selected');
   end;
-  LoadMyTrx('mytrx.nos');
+  LoadMyTrx(MyTrxFilename);
   for i := Length(ListaMisTrx) - 1 downto 0 do
   begin
     Memo1.Lines.Add('Block:     ' + IntToStr(ListaMisTrx[i].block));
